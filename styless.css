@@ -1,0 +1,36 @@
+.post{
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 20px;
+}
+#tittle{
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px
+;
+}
+img{
+    width: 100%;
+}
+.PostHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+body{
+    background-color: #bdbdbd;
+    margin: 0;
+}
+header{
+    background-color: white;
+}
+header h1{
+margin: 0;
+}
+.PostComment{
+    padding: 10px;
+}
+.PostDate{
+    color: lightslategray;
+}
