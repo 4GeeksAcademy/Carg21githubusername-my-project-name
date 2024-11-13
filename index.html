@@ -1,264 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styless.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
 <body>
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-10 offset-md-1">
-            <div class="card card-outline-secondary">
-                <div class="Arriba">
-                    <h1 class="mb-0">Payment form example</h1>
+  <style>
+    .nav-pill .nav-link{
+        color: grey;
+    }
+    .nav-pill .nav-link.active{
+        color: blue;
+    }
+</style>
+<nav class="navbar navbar-light bg-light py-3">
+  <div class="container-fluid">
+      <div class="d-flex w-100 justify-content-between">
+          <div>
+              <i class="fa-brands fa-instagram fa-xl"></i>
+              <h5 class="d-inline-block fs-5">Instagram</h5>
+          </div>
+          <div class="d-flex align-right justify-content-end">
+              <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">
+                  Create a new post
+              </button>
+              <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-gear"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                      <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                      <li>
+                          <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</nav>
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <h6>Caption:</h6>
+              <textarea class="form-control" placeholder="Add the caption of your post here"
+                  id="floatingTextarea2"></textarea>
+              <div class="row p-2">
+                  <button class="col-1 border rounded p-1 m-1 btn-light">
+                      <i class="fa-solid fa-camera"></i>
+                  </button>
+                  <button class="col-1 border rounded p-1 m-1 btn-light">
+                      <i class="fa-solid fa-location-dot"></i>
+                  </button>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Publish</button>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container-fluid p-2">
+  <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+              role="tab" aria-controls="home" aria-selected="true"><i
+                  class="fa-solid fa-table-cells"></i></a>
+      </li>
+      <li class="nav-item" role="presentation">
+          <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+              role="tab" aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+      </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="row">
+              <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.blogs.es/4b5dbd/new-links-awakening-video-shows-off-dungeon-creator-and-map-markers/1366_2000.jpeg" class="img-fluid w-100" alt=""></div>
+              <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://pbs.twimg.com/media/FX7my9cWAAEnEng.jpg" class="img-fluid w-100" alt=""></div>
+              <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/wii_24/SI_Wii_TheLegendOfZeldaSkywardSword_image1600w.jpg" class="img-fluid w-100" alt=""></div>
+          </div>
+          <div class="row">
+              <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://assets.folhavitoria.com.br/images/7c96d460-c39f-11ee-a67d-49792b681b3d--minified.jpeg" class="img-fluid w-100" alt=""></div>
+              <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://www.egames.news/__export/1685559150330/sites/debate/img/2023/05/31/cuantos_juegos_de_the_legend_of_zelda_hay_y_cual_es_el_mejor.jpg_242310155.jpg" class="img-fluid w-100" alt=""></div>
+              <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.blogs.es/juegos/9205/zelda_wii_u/fotos/noticias/zelda_wii_u-3659448.jpg" class="img-fluid w-100" alt=""></div>
+          </div>
+          <div class="row">
+              <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://media.vandal.net/m/1-2021/202111919345650_1.jpg" class="img-fluid w-100" alt=""></div>
+              <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://images.everyeye.it/img-screenshot/the-legend-of-zelda-tears-of-the-kingdom-v1-837009.jpg" class="img-fluid w-100" alt=""></div>
+              <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://www.lacasadeel.net/wp-content/uploads/2024/11/06-mm-741x494.webp" class="img-fluid w-100" alt=""></div>
+          </div>
+      </div>
+      <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="row my-4">
+          <div class="col-6 mx-auto border rounded p-0">
+              <div class="d-flex p-2">
+                  <div class="w-100 fs-4">The Minish Cap</div>
+                  <small>20/09/19</small>
+              </div>
+              <img style="object-fit: cover;" src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheLegendOfZeldaLinksAwakening_image1600w.jpg" class="img-fluid w-100 col-12" alt=""/>
+              <div class="p-2">
+                  <strong>10000 Likes</strong>
+                  <p>The Legend of Zelda: Link's Awakening, es un videojuego de acción y aventura desarrollado por Grezzo y publicado por Nintendo para Nintendo Switch. Es un remake del juego homónimo de 1993 desarrollado originalmente para Game Boy. El juego conserva la perspectiva de vista vertical y los elementos de juego del título original, además de presentar un estilo de arte "retro-moderno" único en la serie, con diseños de personajes tipo juguete y efectos visuales de cambio de inclinación. Su lanzamiento se produjo el 20 de septiembre de 2019</p>
+              </div>
+          </div>
+      </div>
+          <div class="row my-4">
+              <div class="col-6 mx-auto border rounded p-0">
+                  <div class="d-flex p-2">
+                      <div class="w-100 fs-4">The Minish Cap</div>
+                      <small>04/09/04</small>
+                  </div>
+                  <img style="object-fit: cover;" src="https://pbs.twimg.com/media/FX7my9cWAAEnEng.jpg" class="img-fluid w-100 col-12" alt=""/>
+                  <div class="p-2">
+                      <strong>105000 Likes</strong>
+                      <p>The Legend of Zelda: The Minish Cap (en español: La Leyenda de Zelda: El Sombrero Minish), conocido en Japón como Zelda no Densetsu: Fushigi no Bōshi (ゼルダの伝説 ふしぎのぼうし Zeruda no Densetsu Fushigi no Bōshi?, lit. La Leyenda de Zelda: El Sombrero Misterioso), es el duodécimo videojuego de la saga The Legend of Zelda, desarrollado por Flagship bajo la supervisión de Nintendo. The Minish Cap es el primer título original de la saga para consola portátil tras la reedición de The Legend of Zelda: A Link to the Past junto con el primer Zelda multijugador, The Legend of Zelda: Four Swords. El juego llegó a Game Boy Advance en noviembre de 2004 en Japón y Europa, y a principios de 2005 en Estados Unidos y Australia.1​2​ </p>
+                  </div>
+              </div>
+          </div>
+          <div class="row my-4">
+              <div class="col-6 mx-auto border rounded p-0">
+                  <div class="d-flex p-2">
+                      <div class="w-100 fs-4">Skyward Sword</div>
+                      <small>18/11/11</small>
+                  </div>
+                  <img style="object-fit: cover;" src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/wii_24/SI_Wii_TheLegendOfZeldaSkywardSword_image1600w.jpg" class="img-fluid w-100 col-12" alt=""/>
+                  <div class="p-2">
+                      <strong>50054 Likes</strong>
+                      <p>The Legend of Zelda: Skyward Sword (ゼルダの伝説 スカイウォードソード Zeruda no Densetsu: Sukaiwōdo Sōdo?, lit. La Leyenda de Zelda: La Espada del Cielo) es un videojuego de acción y aventura de 2011 de la serie The Legend of Zelda, desarrollado por la filial Nintendo EAD en colaboración con Tantalus Media y publicado por Nintendo para la consola Wii. Fue lanzado el 18 de noviembre de 2011 en Europa6​ y el 20 de noviembre de 2011 en América</p>
+                  </div>
+              </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-2">
+                    <div class="w-100 fs-4">The Legend of Zelda</div>
+                    <small>21/02/96</small>
                 </div>
-                        <div class="card-body">
-                            <div id="error-msg" class="alert alert-danger form-label">Some fields are missing</div>
-                            
-                                 <form method="get" action="welcome.html">
-                                    <div class="row mt-4">
-                                        <div class="col-sm-5 pb-3">
-                                            <label for="Card" class="form-label">Card #</label> 
-                                            <input class="form-control" id="card" name="card" placeholder="XXXXXXXXXXXXXXXX" type="text">
-                                </div>
-                                <div class="col-sm-3 pb-3">
-                                    <label for="CVC" class="form-label">CVC #</label> 
-                                    <input class="form-control" id="CVC" placeholder="0000" type="text">
-                                </div>
-                                <div class="col-sm-4 pb-3">
-                                    <label for="total" class="form-label">Amount</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fas fa-dollar-sign"></i>
-                                        </div>
-                                        <input class="form-control" id="total" placeholder="Amount" type="number">
-                                    </div>
-                                   
-                                    
-                                </div>
-                                <div class="col-sm-6 pb-3">
-                                    <label for="Nombre" class="form-label">First Name</label> 
-                                    <input class="form-control" id="Nombre" type="text">
-                                </div>
-                                <div class="col-sm-6 pb-3">
-                                    <label for="Apellido" class="form-label">Last Name</label> 
-                                    <input class="form-control" id="Apellido" type="text">
-                                </div>
-                                <div class="col-sm-6 pb-3">
-                                    <label for="Ciudad" class="form-label">City</label> 
-                                    <input class="form-control" id="Ciudad type="text">
-                                </div>
-                                <div class="col-sm-3 pb-3">
-                                    <label for="Estados" class="form-label">State</label> <select class="form-control custom-select" id="exampleSt">
-                                    <option class="text-white bg-warning">
-                                        Pick a state
-                                    </option>
-                                    <option value="AL">
-                                        Alabama
-                                    </option>
-                                    <option value="AK">
-                                        Alaska
-                                    </option>
-                                    <option value="AZ">
-                                        Arizona
-                                    </option>
-                                    <option value="AR">
-                                        Arkansas
-                                    </option>
-                                    <option value="CA">
-                                        California
-                                    </option>
-                                    <option value="CO">
-                                        Colorado
-                                    </option>
-                                    <option value="CT">
-                                        Connecticut
-                                    </option>
-                                    <option value="DE">
-                                        Delaware
-                                    </option>
-                                    <option value="DC">
-                                        District Of Columbia
-                                    </option>
-                                    <option value="FL">
-                                        Florida
-                                    </option>
-                                    <option value="GA">
-                                        Georgia
-                                    </option>
-                                    <option value="HI">
-                                        Hawaii
-                                    </option>
-                                    <option value="ID">
-                                        Idaho
-                                    </option>
-                                    <option value="IL">
-                                        Illinois
-                                    </option>
-                                    <option value="IN">
-                                        Indiana
-                                    </option>
-                                    <option value="IA">
-                                        Iowa
-                                    </option>
-                                    <option value="KS">
-                                        Kansas
-                                    </option>
-                                    <option value="KY">
-                                        Kentucky
-                                    </option>
-                                    <option value="LA">
-                                        Louisiana
-                                    </option>
-                                    <option value="ME">
-                                        Maine
-                                    </option>
-                                    <option value="MD">
-                                        Maryland
-                                    </option>
-                                    <option value="MA">
-                                        Massachusetts
-                                    </option>
-                                    <option value="MI">
-                                        Michigan
-                                    </option>
-                                    <option value="MN">
-                                        Minnesota
-                                    </option>
-                                    <option value="MS">
-                                        Mississippi
-                                    </option>
-                                    <option value="MO">
-                                        Missouri
-                                    </option>
-                                    <option value="MT">
-                                        Montana
-                                    </option>
-                                    <option value="NE">
-                                        Nebraska
-                                    </option>
-                                    <option value="NV">
-                                        Nevada
-                                    </option>
-                                    <option value="NH">
-                                        New Hampshire
-                                    </option>
-                                    <option value="NJ">
-                                        New Jersey
-                                    </option>
-                                    <option value="NM">
-                                        New Mexico
-                                    </option>
-                                    <option value="NY">
-                                        New York
-                                    </option>
-                                    <option value="NC">
-                                        North Carolina
-                                    </option>
-                                    <option value="ND">
-                                        North Dakota
-                                    </option>
-                                    <option value="OH">
-                                        Ohio
-                                    </option>
-                                    <option value="OK">
-                                        Oklahoma
-                                    </option>
-                                    <option value="OR">
-                                        Oregon
-                                    </option>
-                                    <option value="PA">
-                                        Pennsylvania
-                                    </option>
-                                    <option value="RI">
-                                        Rhode Island
-                                    </option>
-                                    <option value="SC">
-                                        South Carolina
-                                    </option>
-                                    <option value="SD">
-                                        South Dakota
-                                    </option>
-                                    <option value="TN">
-                                        Tennessee
-                                    </option>
-                                    <option value="TX">
-                                        Texas
-                                    </option>
-                                    <option value="UT">
-                                        Utah
-                                    </option>
-                                    <option value="VT">
-                                        Vermont
-                                    </option>
-                                    <option value="VA">
-                                        Virginia
-                                    </option>
-                                    <option value="WA">
-                                        Washington
-                                    </option>
-                                    <option value="WV">
-                                        West Virginia
-                                    </option>
-                                    <option value="WI">
-                                        Wisconsin
-                                    </option>
-                                    <option value="WY">
-                                        Wyoming
-                                    </option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-3 pb-3">
-                                    <label for="Codigo Postal" class="form-label">Postal Code</label> 
-                                    <input class="form-control" id="Codigo Postal" type="text">
-                                </div>
-                                <div class="col-md-6 pb-3">
-                                    <p for="Tipo de tarjeta">We accept:</p>
-                                    <div class="btn-group" data-toggle="buttons">
-                                        <label class="btn btn-secondary">
-                                            <input autocomplete="off" checked id="blue" name="options" type="radio">
-                                            <i class="fab fa-cc-mastercard"></i>
-                                        </label> 
-                                        <label class="btn btn-secondary">
-                                            <input autocomplete="off" id="red" name="options" type="radio">
-                                            <i class="fab fa-cc-visa"></i>
-                                        </label> 
-                                        <label class="btn btn-secondary">
-                                            <input autocomplete="off" id="green" name="options" type="radio">
-                                            <i class="fab fa-cc-diners-club"></i>
-                                        </label> 
-                                        <label class="btn btn-secondary">
-                                            <input autocomplete="off" id="yellow" name="options" type="radio">
-                                            <i class="fab fa-cc-amex"></i>
-                                        </label> 
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-6 pb-3">
-                                    <label for="Mensaje" class="form-label">Message</label> 
-                                    <textarea class="form-control" id="Mensaje" rows="3"></textarea> 
-                                    <small class="text-muted">Add any notes here.</small>
-                                </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="Abajo">
-                            <div class="d-flex flex-row-reverse">
-                      <button class="btn btn-secondary m-3" type="reset">Cancel</button> 
-                                <button id="sendForm" class="btn btn-primary m-3" type="button" />Send</button>
-                            </div>
-                        </div>
-            </div><!--card-->
-            
-        </div><!--col-->
-    </div> <!--comienzo-->
-        
-     
-   		
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+                <img style="object-fit: cover;" src="https://assets.folhavitoria.com.br/images/7c96d460-c39f-11ee-a67d-49792b681b3d--minified.jpeg" class="img-fluid w-100 col-12" alt=""/>
+                <div class="p-2">
+                    <strong>75410 Likes</strong>
+                    <p>The Legend of Zelda (ゼルダの伝説 Zeruda no Densetsu?) es una serie de videojuegos de acción-aventura creada por los diseñadores japoneses Shigeru Miyamoto y Takashi Tezuka,1​ y desarrollada por Nintendo, empresa que también se encarga de su distribución internacional. Su trama por lo general describe las heroicas aventuras del joven guerrero Link, que debe enfrentarse a peligros y resolver acertijos para ayudar a la Princesa Zelda a derrotar a Ganondorf y salvar su hogar, el reino de Hyrule. </p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+          <div class="col-6 mx-auto border rounded p-0">
+              <div class="d-flex p-2">
+                  <div class="w-100 fs-4">The Wind Waker</div>
+                  <small>13/12/02</small>
+              </div>
+              <img style="object-fit: cover;" src="https://www.egames.news/__export/1685559150330/sites/debate/img/2023/05/31/cuantos_juegos_de_the_legend_of_zelda_hay_y_cual_es_el_mejor.jpg_242310155.jpg" class="img-fluid w-100 col-12" alt=""/>
+              <div class="p-2">
+                  <strong>84520 Likes</strong>
+                  <p>The Legend of Zelda: The Wind Waker, conocido en Japón como Zelda no Densetsu: Kaze no Takuto (ゼルダの伝説 風のタクト Zeruda no Densetsu Kaze no Takuto?, lit. «La Leyenda de Zelda: La Batuta de los Vientos»), es un videojuego de acción-aventura de 2002 desarrollado por la filial EAD y distribuido por Nintendo para la videoconsola Nintendo GameCube. Es el décimo lanzamiento de la franquicia The Legend of Zelda y la precuela directa de The Legend of Zelda: Phantom Hourglass, de Nintendo DS.2 </p>
+              </div>
+          </div>
+      </div>
+      <div class="row my-4">
+        <div class="col-6 mx-auto border rounded p-0">
+            <div class="d-flex p-2">
+                <div class="w-100 fs-4">Ocarina of Time</div>
+                <small>21/11/98</small>
+            </div>
+            <img style="object-fit: cover;" src="https://media.vandal.net/m/1-2021/202111919345650_1.jpg" class="img-fluid w-100 col-12" alt=""/>
+            <div class="p-2">
+                <strong>84520 Likes</strong>
+                <p>The Legend of Zelda: Ocarina of Time (ゼルダの伝説: 時のオカリナ Zeruda no Densetsu: Toki no Okarina?, lit. «La Leyenda de Zelda: Ocarina del Tiempo») es un videojuego de acción-aventura de 1998 desarrollado por la filial Nintendo EAD y publicado por Nintendo para la consola Nintendo 64. Fue lanzado en Japón el 21 de noviembre de 1998,8​ mientras que a Norteamérica llegó dos días después, el 23 de noviembre,7​ y en Europa se estrenó el 11 de diciembre de ese mismo año.9​ Para el caso de Sudamérica, fue presentado en Chile el 23 de noviembre de 1998 en un evento especial para periodistas.13​ A pesar de que en un inicio los diseñadores planeaban lanzar el juego para el periférico Nintendo 64DD, al final se optó por diseñarlo para un cartucho de 256 megabits (igual a 32 megabytes), que eran los de mayor capacidad producidos por Nintendo en ese entonces.14​ Ocarina of Time es el quinto lanzamiento de la franquicia The Legend of Zelda, y se convirtió en el primero de la serie en hacer uso de gráficos 3D. Su sucesor, The Legend of Zelda: Majora's Mask, se estrenó dos años después.  </p>
+            </div>
+        </div>
+    </div>
+    <div class="row my-4">
+      <div class="col-6 mx-auto border rounded p-0">
+          <div class="d-flex p-2">
+              <div class="w-100 fs-4">Zelda II: The Adventure of Link</div>
+              <small>14/01/87</small>
+          </div>
+          <img style="object-fit: cover;" src="https://images.everyeye.it/img-screenshot/the-legend-of-zelda-tears-of-the-kingdom-v1-837009.jpg" class="img-fluid w-100 col-12" alt=""/>
+          <div class="p-2">
+              <strong>5000 Likes</strong>
+              <p>Zelda II: The Adventure of Link (en español: Zelda II: La Aventura de Link), conocido en Japón como Link no Bouken (リンクの冒険 Rinku no Bōken?) y a veces llamado The Legend of Zelda 2, es un videojuego publicado en 1987 para la Nintendo Entertainment System (Famicom en Japón) y el segundo de la saga de juegos The Legend of Zelda. Fue relanzado para Game Boy Advance en 2004 bajo la colección Classic NES Series y en 2003 para Nintendo Gamecube en el recopilatorio The Legend of Zelda: Collector's Edition.  </p>
+          </div>
+      </div>
+  </div>
+  <div class="row my-4">
+    <div class="col-6 mx-auto border rounded p-0">
+        <div class="d-flex p-2">
+            <div class="w-100 fs-4">Majora's Mask</div>
+            <small>21/04/2000</small>
+        </div>
+        <img style="object-fit: cover;" src="https://www.lacasadeel.net/wp-content/uploads/2024/11/06-mm-741x494.webp" class="img-fluid w-100 col-12" alt=""/>
+        <div class="p-2">
+            <strong>500142 Likes</strong>
+            <p>The Legend of Zelda: Majora's Mask (en español: La leyenda de Zelda: La Máscara de Majora), conocido en Japón como Zelda no Densetsu: Mujura no Kamen (ゼルダの伝説 ムジュラの仮面 Zeruda no Densetsu Mujura no Kamen?, lit. La Leyenda de Zelda: La Máscara de Mujura), es un videojuego de acción-aventura de la serie The Legend of Zelda desarrollado por la división Entertainment Analysis and Development de Nintendo para la videoconsola Nintendo 64. Fue lanzado el 27 de abril de 2000 en Japón; el 26 de octubre de 2000 en Norteamérica; y el 17 de noviembre de 2000 en Europa.1​ El título vendió aproximadamente 314 000 copias en Japón durante su primera semana,2​ ha saldado 3.84 millones de unidades en todo el mundo y ha cosechado críticas positivas.3​ Fue relanzado para la Nintendo GameCube como parte del recopilatorio The Legend of Zelda: Collector's Edition y en el servicio Virtual Console de Wii el 3 de abril de 2009 en la región PAL, el 7 de abril en Japón y el 18 de mayo de 2009 en Norteamérica.4​ Una adaptación para la Nintendo 3DS, titulada The Legend of Zelda: Majora's Mask 3D, llegó al mercado el 13 de febrero de 2015.  </p>
+        </div>
+    </div>
+</div>
+      </div>
+  </div>
+</div>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
