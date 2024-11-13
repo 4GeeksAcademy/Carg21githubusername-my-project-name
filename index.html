@@ -1,84 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styless.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
-<header>
-    <div id="tittle">
-        <div>
-            <H1>Breathe Code Photo Feed</H1>
-        </div>
-    </header>
-    <div class="post">
-        <div class="PostHeader">
-            <div class="postTittle">
-               <strong>Mi Primera foto</strong>
-            </div>
-            <div class="PostDate">
-                15/02
-            </div>
-        </div>
-        <div class="photo">
-            <img src="https://img2.rtve.es/i/?w=1600&i=1618587961630.jpg" alt="Imagen de un Gato sentado en un sofa con un teclado">
-        </div>
-        <div class="PostComment">
-            Una foto de mi Gato en el sofa, me parecio gracioso lo concentrado que se ve, parece que trabajara <strong>#BreatheCode</strong>
-        </div>
-    </div>
-</header>
-<div class="post">
-    <div class="PostHeader">
-        <div class="postTittle">
-           <strong>Un Viaje</strong>
-        </div>
-        <div class="PostDate">
-            20/05
-        </div>
-    </div>
-    <div class="photo">
-        <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024/https://www.visitamunich.de/wp-content/uploads/2020/06/eibsee-baviera-lago.jpg" alt="Imagen de un paisaje de un lago en Munich">
-    </div>
-    <div class="PostComment">
-        Una foto de un viaje al que fui a alemania <strong>#BreatheCode</strong>
-    </div>
-</div>
-</header>
-<div class="post">
-    <div class="PostHeader">
-        <div class="postTittle">
-           <strong>Mi Setup</strong>
-        </div>
-        <div class="PostDate">
-            14/12
-        </div>
-    </div>
-    <div class="photo">
-        <img src="https://leagueof.hexania.com/assets/images/blog/uploads/posts-imgs/2023-04/6429ce5b03542.jpeg" alt="Imagen de un setup gamer">
-    </div>
-    <div class="PostComment">
-        Una foto de mi Setup gamer, donde me gusta estudiar y jugar <strong>#BreatheCode</strong>
-    </div>
-</div>
-</header>
-<div class="post">
-    <div class="PostHeader">
-        <div class="postTittle">
-           <strong>Mi Comida Favorita</strong>
-        </div>
-        <div class="PostDate">
-            31/12
-        </div>
-    </div>
-    <div class="photo">
-        <img src="https://www.hola.com/horizon/landscape/e9e1e82cb873-pepperoni-pizza-abob-t.jpg?im=Resize=(960),type=downsize" alt="Imagen de una pizza">
-    </div>
-    <div class="PostComment">
-        Una foto de una pizza que me comi en italia <strong>#BreatheCode</strong>
-    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10 offset-md-1">
+            <div class="card card-outline-secondary">
+                <div class="Arriba">
+                    <h1 class="mb-0">Payment form example</h1>
+                </div>
+                        <div class="card-body">
+                            <div id="error-msg" class="alert alert-danger form-label">Some fields are missing</div>
+                            
+                                 <form method="get" action="welcome.html">
+                                    <div class="row mt-4">
+                                        <div class="col-sm-5 pb-3">
+                                            <label for="Card" class="form-label">Card #</label> 
+                                            <input class="form-control" id="card" name="card" placeholder="XXXXXXXXXXXXXXXX" type="text">
+                                </div>
+                                <div class="col-sm-3 pb-3">
+                                    <label for="CVC" class="form-label">CVC #</label> 
+                                    <input class="form-control" id="CVC" placeholder="0000" type="text">
+                                </div>
+                                <div class="col-sm-4 pb-3">
+                                    <label for="total" class="form-label">Amount</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fas fa-dollar-sign"></i>
+                                        </div>
+                                        <input class="form-control" id="total" placeholder="Amount" type="number">
+                                    </div>
+                                   
+                                    
+                                </div>
+                                <div class="col-sm-6 pb-3">
+                                    <label for="Nombre" class="form-label">First Name</label> 
+                                    <input class="form-control" id="Nombre" type="text">
+                                </div>
+                                <div class="col-sm-6 pb-3">
+                                    <label for="Apellido" class="form-label">Last Name</label> 
+                                    <input class="form-control" id="Apellido" type="text">
+                                </div>
+                                <div class="col-sm-6 pb-3">
+                                    <label for="Ciudad" class="form-label">City</label> 
+                                    <input class="form-control" id="Ciudad type="text">
+                                </div>
+                                <div class="col-sm-3 pb-3">
+                                    <label for="Estados" class="form-label">State</label> <select class="form-control custom-select" id="exampleSt">
+                                    <option class="text-white bg-warning">
+                                        Pick a state
+                                    </option>
+                                    <option value="AL">
+                                        Alabama
+                                    </option>
+                                    <option value="AK">
+                                        Alaska
+                                    </option>
+                                    <option value="AZ">
+                                        Arizona
+                                    </option>
+                                    <option value="AR">
+                                        Arkansas
+                                    </option>
+                                    <option value="CA">
+                                        California
+                                    </option>
+                                    <option value="CO">
+                                        Colorado
+                                    </option>
+                                    <option value="CT">
+                                        Connecticut
+                                    </option>
+                                    <option value="DE">
+                                        Delaware
+                                    </option>
+                                    <option value="DC">
+                                        District Of Columbia
+                                    </option>
+                                    <option value="FL">
+                                        Florida
+                                    </option>
+                                    <option value="GA">
+                                        Georgia
+                                    </option>
+                                    <option value="HI">
+                                        Hawaii
+                                    </option>
+                                    <option value="ID">
+                                        Idaho
+                                    </option>
+                                    <option value="IL">
+                                        Illinois
+                                    </option>
+                                    <option value="IN">
+                                        Indiana
+                                    </option>
+                                    <option value="IA">
+                                        Iowa
+                                    </option>
+                                    <option value="KS">
+                                        Kansas
+                                    </option>
+                                    <option value="KY">
+                                        Kentucky
+                                    </option>
+                                    <option value="LA">
+                                        Louisiana
+                                    </option>
+                                    <option value="ME">
+                                        Maine
+                                    </option>
+                                    <option value="MD">
+                                        Maryland
+                                    </option>
+                                    <option value="MA">
+                                        Massachusetts
+                                    </option>
+                                    <option value="MI">
+                                        Michigan
+                                    </option>
+                                    <option value="MN">
+                                        Minnesota
+                                    </option>
+                                    <option value="MS">
+                                        Mississippi
+                                    </option>
+                                    <option value="MO">
+                                        Missouri
+                                    </option>
+                                    <option value="MT">
+                                        Montana
+                                    </option>
+                                    <option value="NE">
+                                        Nebraska
+                                    </option>
+                                    <option value="NV">
+                                        Nevada
+                                    </option>
+                                    <option value="NH">
+                                        New Hampshire
+                                    </option>
+                                    <option value="NJ">
+                                        New Jersey
+                                    </option>
+                                    <option value="NM">
+                                        New Mexico
+                                    </option>
+                                    <option value="NY">
+                                        New York
+                                    </option>
+                                    <option value="NC">
+                                        North Carolina
+                                    </option>
+                                    <option value="ND">
+                                        North Dakota
+                                    </option>
+                                    <option value="OH">
+                                        Ohio
+                                    </option>
+                                    <option value="OK">
+                                        Oklahoma
+                                    </option>
+                                    <option value="OR">
+                                        Oregon
+                                    </option>
+                                    <option value="PA">
+                                        Pennsylvania
+                                    </option>
+                                    <option value="RI">
+                                        Rhode Island
+                                    </option>
+                                    <option value="SC">
+                                        South Carolina
+                                    </option>
+                                    <option value="SD">
+                                        South Dakota
+                                    </option>
+                                    <option value="TN">
+                                        Tennessee
+                                    </option>
+                                    <option value="TX">
+                                        Texas
+                                    </option>
+                                    <option value="UT">
+                                        Utah
+                                    </option>
+                                    <option value="VT">
+                                        Vermont
+                                    </option>
+                                    <option value="VA">
+                                        Virginia
+                                    </option>
+                                    <option value="WA">
+                                        Washington
+                                    </option>
+                                    <option value="WV">
+                                        West Virginia
+                                    </option>
+                                    <option value="WI">
+                                        Wisconsin
+                                    </option>
+                                    <option value="WY">
+                                        Wyoming
+                                    </option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3 pb-3">
+                                    <label for="Codigo Postal" class="form-label">Postal Code</label> 
+                                    <input class="form-control" id="Codigo Postal" type="text">
+                                </div>
+                                <div class="col-md-6 pb-3">
+                                    <p for="Tipo de tarjeta">We accept:</p>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-secondary">
+                                            <input autocomplete="off" checked id="blue" name="options" type="radio">
+                                            <i class="fab fa-cc-mastercard"></i>
+                                        </label> 
+                                        <label class="btn btn-secondary">
+                                            <input autocomplete="off" id="red" name="options" type="radio">
+                                            <i class="fab fa-cc-visa"></i>
+                                        </label> 
+                                        <label class="btn btn-secondary">
+                                            <input autocomplete="off" id="green" name="options" type="radio">
+                                            <i class="fab fa-cc-diners-club"></i>
+                                        </label> 
+                                        <label class="btn btn-secondary">
+                                            <input autocomplete="off" id="yellow" name="options" type="radio">
+                                            <i class="fab fa-cc-amex"></i>
+                                        </label> 
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6 pb-3">
+                                    <label for="Mensaje" class="form-label">Message</label> 
+                                    <textarea class="form-control" id="Mensaje" rows="3"></textarea> 
+                                    <small class="text-muted">Add any notes here.</small>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="Abajo">
+                            <div class="d-flex flex-row-reverse">
+                      <button class="btn btn-secondary m-3" type="reset">Cancel</button> 
+                                <button id="sendForm" class="btn btn-primary m-3" type="button" />Send</button>
+                            </div>
+                        </div>
+            </div><!--card-->
+            
+        </div><!--col-->
+    </div> <!--comienzo-->
         
+     
+   		
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
